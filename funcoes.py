@@ -87,3 +87,21 @@ def calcula_pontos_quadra(numeros_jogados):
             break
 
     return total
+
+
+def calcula_pontos_quina(dados_jogados):
+    dados = {}
+    for i in range(len(dados_jogados)):
+        valor = dados_jogados[i]
+        if valor not in dados:
+            dados[valor] = 1
+        else:
+            dados[valor] += 1
+
+    total = 0
+    for j in dados:
+        if dados[j] == 5:
+            total = 50
+            break
+
+    return total
