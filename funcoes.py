@@ -51,3 +51,21 @@ def calcula_pontos_sequencia_alta(dados):
                     if dados[i] + 4 in dados:
                         return 30
     return 0
+
+def calcula_pontos_full_house(dados):
+    valores = {}
+    for d in dados:
+        if d in valores:
+            valores[d] += 1
+        else:
+            valores[d] = 1
+
+    if len(valores) == 2:
+        a = list(valores.values())
+        if (a[0] == 3 and a[1] == 2) or (a[0] == 2 and a[1] == 3):
+            total = 0
+            for num in dados:
+                total += num
+            return total
+
+    return 0
