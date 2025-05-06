@@ -69,3 +69,21 @@ def calcula_pontos_full_house(dados):
             return total
 
     return 0
+
+def calcula_pontos_quadra(numeros_jogados):
+    dados = {}
+    for i in range(len(numeros_jogados)):
+        valor = numeros_jogados[i]
+        if valor not in dados:
+            dados[valor] = 1
+        else:
+            dados[valor] += 1
+
+    total = 0
+    for numero in dados:
+        if dados[numero] >= 4:
+            for j in range(len(numeros_jogados)):
+                total += numeros_jogados[j]
+            break
+
+    return total
