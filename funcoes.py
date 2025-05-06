@@ -100,7 +100,7 @@ def calcula_pontos_quina(dados_jogados):
 
     total = 0
     for j in dados:
-        if dados[j] == 5:
+        if dados[j] >= 5:
             total = 50
             break
 
