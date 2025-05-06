@@ -35,3 +35,11 @@ def calcula_pontos_soma(dados_rolados):
         total += dados_rolados[i]
     return total
 
+def calcula_pontos_sequencia_baixa(dados):
+    for i in range(len(dados)):
+        if dados[i] + 1 in dados:
+            if dados[i] + 2 in dados:
+                if dados[i] + 3 in dados:
+                    return 15
+    return 0
+
