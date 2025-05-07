@@ -131,5 +131,5 @@ def faz_jogada(lista, cat, cartela):
         cartela['regra_avancada'][cat] = pavançado[cat]
     else:
         categoria = int(cat)
-        cartela['regra_simples'][categoria] - psimples[categoria]
+        cartela['regra_simples'][categoria] = psimples[categoria]
     return cartela
