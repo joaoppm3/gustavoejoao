@@ -105,3 +105,20 @@ def calcula_pontos_quina(dados_jogados):
             break
 
     return total
+
+def calcula_pontos_regra_avancada(dados):
+    quina = calcula_pontos_quina(dados)
+    fullhouse = calcula_pontos_full_house(dados)
+    quadra = calcula_pontos_quadra(dados)
+    soma = calcula_pontos_soma(dados)
+    sequencia_alta = calcula_pontos_sequencia_alta(dados)
+    sequencia_baixa = calcula_pontos_sequencia_baixa(dados)
+    tudo = {
+    'cinco_iguais': quina,
+    'full_house': fullhouse,
+    'quadra': quadra,
+    'sem_combinacao': soma,
+    'sequencia_alta': sequencia_alta,
+    'sequencia_baixa': sequencia_baixa
+    }
+    return tudo
